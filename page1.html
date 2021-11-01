@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+  let x = document.forms["page1"]["s"].value;
+  if (x > 100000) {
+    alert("S can't be more than 100000");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+
+<h2>Analytical Tool</h2>
+
+<form name="page1" action="page2.php" onsubmit="return validateForm()" method="post">
+  S: <input type="text" name="s">
+  <input type="submit" value="Next">
+</form>
+
+</body>
+</html>
